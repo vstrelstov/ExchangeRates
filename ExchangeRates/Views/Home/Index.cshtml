@@ -1,0 +1,39 @@
+﻿@model ExchangeRates.Models.IndexViewModel
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="row">
+    <div class="col-md-4 jumbotron">
+        <form method="post">
+            @Html.ValidationSummary(true)
+            <div class="form-group">
+                <label class="form-text">Start date</label>
+                <input class="form-control" name="StartDate" type="date"/>
+                @Html.ValidationMessageFor(model => model.StartDate)
+            </div>
+            <div class="form-group">
+                <label class="form-text">Finish date</label>
+                <input class="form-control" name="FinishDate" type="date"/>
+                @Html.ValidationMessageFor(model => model.FinishDate)
+            </div>
+            <div class="form-group">
+                <label class="form-text">Currency</label>
+                <select class="form-control" name="Currency">
+                    <option>RUB</option>
+                    <option>USD</option>
+                    <option>EUR</option>
+                    <option>GBP</option>
+                    <option>JPY</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-outline-success">Graph</button>
+        </form>
+    </div>
+    @if (Model != null)
+    {
+        <div class="col-md-8">
+            @(ViewBag.Chart)
+        </div>
+    } 
+</div>
