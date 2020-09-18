@@ -6,6 +6,7 @@ using Meziantou.OpenExchangeRates;
 
 namespace ExchangeRates.Classes
 {
+// TODO: Rename this class into OpenExchangeRatesFacade
     public class OpenExchangeRates
     {
         private readonly OpenExchangeRatesClient _oerClient;
