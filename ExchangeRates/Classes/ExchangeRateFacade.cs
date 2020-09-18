@@ -6,6 +6,7 @@ using ExchangeRates.Models;
 
 namespace ExchangeRates.Classes
 {
+// TODO: Rename this class, because it implements Mediator pattern
     public class ExchangeRateFacade
     {
         private readonly OpenExchangeRates _openExchangeRates;
